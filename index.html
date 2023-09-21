@@ -132,6 +132,79 @@
         bill>=50 && bill<=300 ? console.log(`the bill:${bill} tip:${tip1} tổng tiền:${tip1+bill}`):console.log(`the bill:${bill} tip:${tip2} tổng tiền:${tip2+bill}`);
         bill>=50 && bill<=300 ? console.log(`the bill:${bill1} tip:${tip1} tổng tiền:${tip1+bill1}`):console.log(`the bill:${bill1} tip:${tip2} tổng tiền:${tip2+bill1}`);
         bill>=50 && bill<=300 ? console.log(`the bill:${bill2} tip:${tip1} tổng tiền:${tip1+bill2}`):console.log(`the bill:${bill2} tip:${tip2} tổng tiền:${tip2+bill2}`);
+        //coding challenge #5
+        console.log("Bài 5 : ");
+        const calcAverage = (a, b, c) => {
+        return (a + b + c) / 3;
+        };
+        var DolphinsScore =calcAverage(44, 23, 71);
+        var koalasScore = calcAverage(65, 54, 49);
+
+        console.log(
+        `điểm Dolphins: ${DolphinsScore} và điểm Koalas: ${koalasScore}`
+        );
+
+        const checkWinner = (avgDolphins, avgKoalas) => {
+        avgDolphins >= 2 * avgKoalas
+            ? console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`)
+            : avgKoalas >= 2 * avgDolphins
+            ? console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`)
+            : console.log("Không team nào thắng");
+        };
+        checkWinner(DolphinsScore, koalasScore);
+        //coding challenge #7
+        console.log("Bài 7 : ");
+        const mark = {
+        name: "Mark",
+        tall: 1.69,
+        weights: 78,
+        calcBMI: function () {
+            this.bmi = this.weights / (this.tall * this.tall);
+            return this.bmi;
+        },
+        };
+        const john = {
+        name: "John",
+        tall: 1.95,
+        weights: 92,
+        calcBMI: function () {
+            this.bmi = this.weights / (this.tall * this.tall);
+            return this.bmi;
+        },
+        };
+        console.log(
+        `BMI of ${mark.name} is ${mark.calcBMI()} and BMI of  ${
+            john.name
+        } is ${john.calcBMI()}`
+        );
+        mark.bmi > john.bmi
+        ? console.log(
+            `${mark.name}'s BMI (${mark.bmi}) cao hơn ${john.name}'s BMI (${john.bmi})`
+            )
+        : mark.bmi < john.bmi
+        ?
+        console.log(
+            `${john.name}'s BMI (${john.bmi}) cao hơn ${mark.name}'s BMI (${mark.bmi})`
+            )
+        : console.log("BMI bằng nhau");
+        //coding challenge #9
+        console.log("Bài 9 : ");
+        const data1 = [17, 21, 23];
+        const data2 = [12, 5, -5, 0, 4];
+        function printForecast(arr) {
+        let x = "";
+            length = arr.length;
+        for (let i = 0; i < length; i++) {
+            x += `... ${arr[i]}°C in ${i + 1} days `;
+        }
+
+        console.log(x);
+        }
+        console.log("Data 1:");
+        printForecast(data1);
+
+        console.log("Data 2:");
+        printForecast(data2);
     </script>
 </body>
 
